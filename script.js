@@ -1,13 +1,14 @@
-const bt_click = document.querySelectorAll('.btn');
+const section = document.querySelectorAll('.sec');
 
-bt_click.forEach(function cbforeach(bt){
-    bt.addEventListener('click',function cb()
-{
-    bt.classList.toggle('open');
-    const sib = bt.parentNode.nextElementSibling;
-    sib.classList.toggle('open');
-    console.log(sib);
+section.forEach(function cb1(item){
+    item.addEventListener('click' , function cb_inner1(){
+        const childs = item.children;
+        console.log(childs);
+        const first_child = childs[0].children;
+        const btn = first_child[1];
+        btn.classList.toggle('open');
+        childs[1].classList.toggle('open');
 
-})
-}
-)
+    });
+
+});

@@ -71,6 +71,10 @@ body
     font-weight: 600;
     width: 95%;
 }
+.ques h4:hover
+{
+    color: var(--Grayish--purple);
+}
 .btn
 {
     border: 0;
